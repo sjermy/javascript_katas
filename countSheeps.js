@@ -13,5 +13,17 @@ var sheeps = [true,  true,  true,  false,
   false, false, true,  true];
 
 function countSheeps(arrayOfSheep) {
-  // TODO May the force be with you
+  var count = 0;
+  if (typeof arrayOfSheep !== "object") return count;
+  for (var i=0;i<arrayOfSheep.length;i++) {
+    if (arrayOfSheep[i] === true) count++;
+  }
+  return count;
 }
+
+console.log(countSheeps(sheeps));
+
+// new solutions
+let countSheeps = x => x.filter( s => s ).length;
+
+const countSheeps = arrayOfSheeps => arrayOfSheeps.filter(s => s).length;
