@@ -11,5 +11,16 @@
 
 // https://www.codewars.com/kata/exes-and-ohs/train/javascript
 function XO(str) {
-    //code here
+    let x = 0; let o = 0;
+    for (let i=0;i<str.length;i++) {
+      if (str.charAt(i) === 'x' || str.charAt(i) === 'X') x++;
+      else if (str.charAt(i) === 'o' || str.charAt(i) === 'O') o++;
+    }
+    return x == o ? true : false;
 }
+
+XO("ooxx"); // => true
+XO("xooxx"); // => false
+XO("ooxXm"); // => true
+XO("zpzpzpp"); // => true
+XO("zzoo"); // => false
