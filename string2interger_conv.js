@@ -14,5 +14,5 @@ It should assume that all numbers are not signed and written in base 10*/
 
 // https://www.codewars.com/kata/string-to-integer-conversion/train/javascript
 function myParseInt(str) {
-  return 0;
+  return str.trim().search(/^[0-9]+$/) >= 0 ? Number.parseInt(str) : NaN;
 }
